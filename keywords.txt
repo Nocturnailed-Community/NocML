@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map For NocML
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+NocML	KEYWORD1
+KNN	KEYWORD1
+NaiveBayes	KEYWORD1
+KMeans	KEYWORD1
+LinearForecaster	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+predict	KEYWORD2
+train	KEYWORD2
+addSample	KEYWORD2
+cluster	KEYWORD2
+forecast	KEYWORD2
+euclideanDistance	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
