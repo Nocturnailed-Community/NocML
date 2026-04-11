@@ -12,6 +12,5 @@ jobs:
       - name: Run Arduino Lint
         uses: arduino/arduino-lint-action@v1
         with:
-          path: ./
           compliance: strict # Akan gagal jika ada Error atau Warning
-          library-manager: update # Mengecek apakah library ini sudah siap masuk ke library manager
+          library-manager: submit # Pengecekan standar untuk mensubmit ulang/pertama kali (bukan update, karena belum ada di index)
