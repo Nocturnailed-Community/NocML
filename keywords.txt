@@ -8,18 +8,27 @@
 NocML	KEYWORD1
 KNN	KEYWORD1
 NaiveBayes	KEYWORD1
+LogisticRegression	KEYWORD1
+DecisionTreeClassifier	KEYWORD1
+DecisionNode	KEYWORD1
 KMeans	KEYWORD1
 LinearForecaster	KEYWORD1
+MinMaxScaler	KEYWORD1
+StandardScaler	KEYWORD1
+PolynomialFeatures	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 predict	KEYWORD2
-train	KEYWORD2
-addSample	KEYWORD2
-cluster	KEYWORD2
-forecast	KEYWORD2
-euclideanDistance	KEYWORD2
+predictProbability	KEYWORD2
+run	KEYWORD2
+transform	KEYWORD2
+fit	KEYWORD2
+forecastNext	KEYWORD2
+getSlope	KEYWORD2
+updateParameters	KEYWORD2
+setK	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
