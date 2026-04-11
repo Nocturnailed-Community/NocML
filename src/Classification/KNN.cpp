@@ -16,7 +16,7 @@ namespace NocML {
         }
 
         for (size_t i = 0; i < _num_samples; i++) {
-            float dist = euclideanDistance(input, &_samples[i * _dims], _dims);
+            float dist = squaredEuclideanDistance(input, &_samples[i * _dims], _dims);
 
             // Find if this distance is smaller than the current bests
             for (size_t j = 0; j < _k; j++) {

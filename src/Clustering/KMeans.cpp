@@ -55,7 +55,7 @@ namespace NocML {
         int bestCluster = 0;
 
         for (size_t j = 0; j < _k; j++) {
-            float dist = euclideanDistance(input, &_centroids[j * _dims], _dims);
+            float dist = squaredEuclideanDistance(input, &_centroids[j * _dims], _dims);
             if (dist < minDist) {
                 minDist = dist;
                 bestCluster = j;

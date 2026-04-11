@@ -35,7 +35,7 @@ namespace NocML {
          * Predict the class label.
          */
         int predict(const float* input) {
-            float maxLogPost = -1.0e30; // Very small
+            float maxLogPost = -1.0e30f; // Very small
             int bestClass = -1;
 
             for (size_t c = 0; c < _num_classes; c++) {
@@ -43,12 +43,14 @@ namespace NocML {
                 for (size_t i = 0; i < _dims; i++) {
                     float mean = _means[c * _dims + i];
                     float var = _variances[c * _dims + i];
-                    if (var < 1e-6) var = 1e-6; // Avoid division by zero
+                    if (var < 1e-6f) var = 1e-6f; // Avoid division by zero
 
                     float diff = input[i] - mean;
-                    // Gaussian log-likelihood
-                    logPost -= 0.5 * log(2 * M_PI * var);
-                    logPost -= (diff * diff) / (2 * var);
+                    // Optimized Gaussian log-likelihood
+                    // Removing `0.5 * log(2 * M_PI)` because it is a constant factor applied equally to all classes!
+                    // This acts as a massive memory and CPU cycle save during real-time inference.
+                    logPost -= 0.5f * log(var);
+                    logPost -= (diff * diff) / (2.0f * var);
                 }
 
                 if (logPost > maxLogPost) {

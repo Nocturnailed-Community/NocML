@@ -280,4 +280,4 @@ print(f"Bias: {model.intercept_[0]}")
 ---
 
 ## License
-MIT License. Developed by Muhammad Ikhwan Fathulloh for NocEngine.
+MIT License. Developed by Muhammad Ikhwan Fathulloh for NocML.

@@ -19,6 +19,19 @@ namespace NocML {
     }
 
     /**
+     * Calculate Squared Euclidean distance (Skipping sqrt() for massive optimization).
+     * Ideal for comparisons in KNN and K-Means.
+     */
+    inline float squaredEuclideanDistance(const float* v1, const float* v2, size_t dims) {
+        float sum = 0;
+        for (size_t i = 0; i < dims; i++) {
+            float diff = v1[i] - v2[i];
+            sum += diff * diff;
+        }
+        return sum;
+    }
+
+    /**
      * Calculate Manhattan distance between two vectors.
      */
     inline float manhattanDistance(const float* v1, const float* v2, size_t dims) {
