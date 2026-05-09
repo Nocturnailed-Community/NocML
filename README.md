@@ -2,6 +2,7 @@
 
 [![Indonesian](https://img.shields.io/badge/Language-Indonesian-blue)](README_id.md)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-NocML-black?logo=github)](https://github.com/Nocturnailed-Community/NocML)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20092782.svg)](https://doi.org/10.5281/zenodo.20092782)
 
 A lightweight, efficient C++ library for machine learning on microcontrollers, inspired by the **Scikit-Learn** API.
 
